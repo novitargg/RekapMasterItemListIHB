@@ -37,7 +37,7 @@ def app():
         try:
             gr_tarikan = pd.read_excel(file_tarikan_gr_all_brand, sheet_name = 'GR STORE')
             gr_tarikan = gr_tarikan.dropna(axis=1,how='all' )
-            gr_tarikan = gr_tarikan.iloc[3:].reset_index(drop=True)
+            gr_tarikan = gr_tarikan.iloc[4:].reset_index(drop=True)
             gr_tarikan.columns = ['Item Code 1', 'GR 1','Item Code 2', 'GR 2','Item Code 3', 'GR 3']
             #ubah format data tarikan
             gr_tarikan['GR 2']= pd.to_datetime(gr_tarikan['GR 2']).dt.strftime('%d/%m/%Y')
